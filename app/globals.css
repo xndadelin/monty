@@ -70,3 +70,7 @@
 .animate-gradient-shift {
   animation: gradientShift 4s ease infinite;
 }
+
+.fillout {
+  color: #ff6f61 !important
+}

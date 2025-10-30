@@ -7,6 +7,7 @@ export default function Monty() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    window.location.href = `https://forms.fillout.com/t/8wd1jGykQhus?email=${encodeURIComponent(email)}`
   };
 
   return (

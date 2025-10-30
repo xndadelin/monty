@@ -13,10 +13,6 @@ const faqData: FAQItem[] = [
     answer: "Monty is a YSWS (You Ship, We Ship) Hack Club program based on Python libraries. In a nutshell, you code open-source Python libraries, publish them to PyPI, get venom coins, and use those coins to buy cool stuff from our shop!"
   },
   {
-    question: "How do I RSVP?",
-    answer: "You can RSVP by clicking <a href='form' className='underline text-red-200 text-decoration-wavy'>here</a> and filling out the form with your details. Once submitted, you'll receive a confirmation email with further instructions."
-  },
-  {
     question: "Who can join Monty?",
     answer: "Monty is open to any Hack Clubber interested in Python programming, no matter their skill level, background, or location. We welcome beginners and experienced developers alike!"
   },
