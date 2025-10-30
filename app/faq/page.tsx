@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 
 interface FAQItem {
   question: string;
@@ -58,7 +59,7 @@ export default function FAQ() {
           <div className="absolute top-0 left-0 right-0 bottom-0 bg-[radial-gradient(circle_at_80%_50%,rgba(74,144,226,0.1)_0%,transparent_50%)]" />
         </div>
 
-        <a
+        <Link
           href="/"
           className="fixed top-[30px] left-[30px] z-[100]
                      px-7 py-[14px] text-lg font-bold
@@ -75,7 +76,7 @@ export default function FAQ() {
           style={{ fontFamily: "'Fredoka One', cursive" }}
         >
           ← Back
-        </a>
+        </Link>
 
         <div className="fixed top-[10%] left-[5%] text-[80px] opacity-10 pointer-events-none z-0">🐍</div>
         <div className="fixed top-[60%] right-[8%] text-[80px] opacity-10 pointer-events-none z-0">🐍</div>
