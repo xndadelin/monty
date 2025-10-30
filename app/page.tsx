@@ -1,152 +1,93 @@
-import Image from "next/image";
-import { Timeline } from "@/components/ui/timeline";
-import { SparklesText } from "@/components/ui/sparkles-text"
+"use client";
 
-export default function Home() {
-  const data = [
-    {
-      title: "RSVP",
-      content: (
-        <div>
-          <p className="text-neutral-100 mb-8 leading-relaxed text-xl md:text-2xl">
-             Want Monty to happen? Click the <strong className="text-[#FFD43B]"> <a href="#">RSVP</a> </strong> on the left to let us know you're interested!
-             Once we get enough people interested & get sponsorship, we'll kick off the program with more details on how to participate, submit your libraries, and earn Venom coins.
-             
-          </p>
-        </div>
-      ),  
-    },
-    {
-      title: "FAQ",
-      content: (
-        <div className="space-y-8">
-          <div>
-            <p className="text-[#FFD43B] text-xl md:text-2xl font-bold mb-3">
-              What is Monty?
-            </p>
-            <p className="text-neutral-200 text-base md:text-lg leading-relaxed">
-              Monty is a Python based YSWS (You Ship, We Ship) Hack Club program! In a nutshell, you code Python libraries, publish them to <a href="https://pypi.org" className="text-[#FFD43B] underline hover:text-[#3776AB] transition-colors">pypi.org</a>, and get Venom coins in return. These coins can be used to buy cool stuff from our shop.
-            </p>
-          </div>
-          
-          <div>
-            <p className="text-[#FFD43B] text-xl md:text-2xl font-bold mb-3">
-              Who can join Monty?
-            </p>
-            <p className="text-neutral-200 text-base md:text-lg leading-relaxed">
-              Monty is open to all Hack Club members who likes Python programming and want to contribute to the open-source community. Whether you're a beginner or an experienced c, Monty welcomes you to participate and showcase your skills & imagination.
-            </p>
-          </div>
-          
-          <div>
-            <p className="text-[#FFD43B] text-xl md:text-2xl font-bold mb-3">
-              What is open-source library?
-            </p>
-            <p className="text-neutral-200 text-base md:text-lg leading-relaxed">
-              An open-source library is a collection of pre-written code that is made available to the public for use, modification, and distribution. You can find open-source libraries for various programming languages, including Python, on platforms like GitHub and PyPI. 
-              PyPi is the official package repository for Python, where developers can publish and share their libraries with the community. It's the best way to contribute to the Python ecosystem and open-source software in general.
-            </p>
-          </div>
-          
-          <div>
-            <p className="text-[#FFD43B] text-xl md:text-2xl font-bold mb-3">
-              What is the shop?
-            </p>
-            <p className="text-neutral-200 text-base md:text-lg leading-relaxed">
-              The Monty shop is an exclusive marketplace where you can redeem your hard-earned Venom coins for a variety of exciting rewards. From swag to tech gadgets, the shop offers a range of items that celebrate your contributions to the Python ecosystem.
-            </p>
-          </div>
-          
-          <div>
-            <p className="text-[#FFD43B] text-xl md:text-2xl font-bold mb-3">
-              How do I get started?
-            </p>
-            <p className="text-neutral-200 text-base md:text-lg leading-relaxed mb-6">
-              To get started with Monty, simply RSVP & join the channel if you haven't already. Once we get enough people interested & get sponsorship, we'll kick off the program with more details on how to participate, submit your libraries, and earn Venom coins.
-            </p>
-          </div>
+import { useState } from "react";
 
-          <div>
-            <p className="text-[#FFD43B] text-xl md:text-2xl font-bold mb-3">
-              I don't know how to code a Python library. Can I still join?
-            </p>
-            <p className="text-neutral-200 text-base md:text-lg leading-relaxed">
-              Absolutely! Monty is designed to be inclusive and supportive of all skill levels. If you're new to coding or Python, we encourage you to join and learn alongside other members. There are plenty of resources and community support available to help you get started on your journey to creating your first Python library.
-            </p>
-          </div>
+export default function Monty() {
+  const [email, setEmail] = useState("");
 
-          <div className="text-neutral-400 text-sm md:text-base italic">
-            <p>
-              *FAQ content is subject to change as the Monty program evolves. Stay tuned for updates and new information!
-            </p>
-          </div>
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+  };
 
-        </div>
-      ),
-    },
-    {
-      title: "Updates",
-      content: (
-        <div>
-          <p className="text-neutral-100 text-lg md:text-xl font-semibold mb-6">
-            Latest improvements & additions
-          </p>
-          <div className="mb-8 space-y-2">
-            <div className="flex gap-3 items-center text-neutral-200 text-sm md:text-base">
-              <span className="text-[#FFD43B]">✓</span> Card grid component
-            </div>
-            <div className="flex gap-3 items-center text-neutral-200 text-sm md:text-base">
-              <span className="text-[#FFD43B]">✓</span> Startup template Aceternity
-            </div>
-            <div className="flex gap-3 items-center text-neutral-200 text-sm md:text-base">
-              <span className="text-[#FFD43B]">✓</span> Random file upload lol
-            </div>
-            <div className="flex gap-3 items-center text-neutral-200 text-sm md:text-base">
-              <span className="text-[#FFD43B]">✓</span> Himesh Reshammiya Music CD
-            </div>
-            <div className="flex gap-3 items-center text-neutral-200 text-sm md:text-base">
-              <span className="text-[#FFD43B]">✓</span> Salman Bhai Fan Club registrations open
-            </div>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src="https://assets.aceternity.com/pro/hero-sections.png"
-              alt="hero template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(255,212,59,0.1),_0_1px_1px_rgba(0,_0,_0,_0.3)]"
-            />
-            <Image
-              src="https://assets.aceternity.com/features-section.png"
-              alt="feature template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(255,212,59,0.1),_0_1px_1px_rgba(0,_0,_0,_0.3)]"
-            />
-            <Image
-              src="https://assets.aceternity.com/pro/bento-grids.png"
-              alt="bento template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(255,212,59,0.1),_0_1px_1px_rgba(0,_0,_0,_0.3)]"
-            />
-            <Image
-              src="https://assets.aceternity.com/cards.png"
-              alt="cards template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(255,212,59,0.1),_0_1px_1px_rgba(0,_0,_0,_0.3)]"
-            />
-          </div>
-        </div>
-      ),
-    },
-  ];
   return (
-    <div className="min-h-screen w-full bg-gradient-to-b from-[#1a1a2e] via-[#16213e] to-[#0f1419]">
-      <div className="w-full">
-        <Timeline data={data} />
+    <div className="min-h-screen flex justify-center items-center relative overflow-hidden bg-gradient-to-br from-[#1e3a5f] via-[#2b5876] to-[#4e8098]">
+      <a 
+          href="/faq"
+          className="fixed top-[30px] right-[30px] z-[100]
+                     px-7 py-[14px] text-lg font-bold
+                     bg-gradient-to-br from-[#4A90E2] to-[#5BA3F5]
+                     border-[3px] border-[#4A90E2] rounded-[15px]
+                     text-white no-underline cursor-pointer
+                     transition-all duration-300
+                     shadow-[0_5px_25px_rgba(74,144,226,0.4)]
+                     [text-shadow:0_2px_4px_rgba(0,0,0,0.2)]
+                     hover:bg-gradient-to-br hover:from-[#5BA3F5] hover:to-[#4A90E2] hover:border-[#FFD43B] 
+                     hover:shadow-[0_8px_35px_rgba(74,144,226,0.6),0_0_20px_rgba(255,212,59,0.3)] hover:-translate-y-[3px] hover:scale-105
+                     active:-translate-y-[1px] active:scale-[1.02]"
+          style={{ fontFamily: "'Fredoka One', cursive" }}
+        >
+          FAQ
+        </a>
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 left-0 right-0 bottom-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,212,59,0.1)_0%,transparent_50%)]" />
+          <div className="absolute top-0 left-0 right-0 bottom-0 bg-[radial-gradient(circle_at_80%_50%,rgba(74,144,226,0.1)_0%,transparent_50%)]" />
+        </div>
+
+        <div className="relative text-center">
+          <div className="absolute -top-20 -left-24 text-[120px] opacity-15 pointer-events-none -rotate-[15deg]">
+            🐍
+          </div>
+          <div className="absolute -bottom-20 -right-24 text-[120px] opacity-15 pointer-events-none rotate-[15deg]">
+            🐍
+          </div>
+
+          <div className="relative inline-block">
+            <h1 
+              className="relative inline-block text-[clamp(80px,20vw,200px)] font-bold tracking-[0.05em] animate-float
+                         bg-gradient-to-br from-[#4A90E2] via-[#FFD43B] to-[#4A90E2] bg-[length:200%_200%]
+                         bg-clip-text text-transparent animate-gradient-shift
+                         drop-shadow-[0_10px_30px_rgba(0,0,0,0.3)]"
+              style={{ 
+                fontFamily: "'Fredoka One', cursive",
+                textShadow: '0 0 40px rgba(255, 212, 59, 0.3), 0 0 80px rgba(74, 144, 226, 0.2)'
+              }}
+            >
+              <span className="absolute -left-[0.6em] text-[#FFD43B] opacity-80 animate-blink blur-[20px] font-extrabold">{'>'}</span>
+              Monty
+              <span className="absolute -right-[0.6em] text-[#4A90E2] opacity-80 animate-blink-delayed blur-[20px] font-extrabold">{'<'}</span>
+            </h1>
+          </div>
+
+          <form onSubmit={handleSubmit} className="mt-20 flex flex-row items-center justify-center gap-0">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="RSVP! Enter your email..."
+              className="w-[350px] max-w-[60vw] px-5 py-[10px] text-base
+                         bg-white/10 backdrop-blur-[10px]
+                         border-[3px] border-[rgba(255,212,59,0.5)] border-r-0 rounded-l-[15px]
+                         text-white placeholder:text-white/60 placeholder:font-bold
+                         font-['Courier_New',monospace]
+                         outline-none transition-all duration-300
+                         focus:bg-white/15 focus:border-[#FFD43B] focus:shadow-[0_0_30px_rgba(255,212,59,0.4)]"
+              required
+            />
+            <button
+              type="submit"
+              className="px-7 py-[10px] text-base font-bold
+                         bg-[#FFD43B] border-[3px] border-[#FFD43B] border-l-0 rounded-r-[15px]
+                         text-[#1e3a5f] cursor-pointer
+                         font-['Courier_New',monospace]
+                         transition-all duration-300
+                         shadow-[0_5px_20px_rgba(0,0,0,0.3)]
+                         hover:bg-[#ffd000] hover:border-[#ffd000] hover:shadow-[0_5px_30px_rgba(255,212,59,0.6)]
+                         active:scale-[0.98]"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
   );
 }
