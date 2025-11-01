@@ -61,7 +61,7 @@ export default function Monty() {
           </div>
 
           <p className="mt-8 text-white text-center max-w-[580px] mx-auto px-6 text-lg sm:text-xl md:text-2xl font-['Inter',sans-serif] leading-relaxed font-light">
-            Code <span className="text-[#FFD43B] font-semibold">Python libraries</span>, publish to <span className="text-[#FFD43B] font-semibold">PyPI</span>,
+            Code <span className="text-[#FFD43B] font-semibold">Python libraries</span>, publish to <span className="text-[#FFD43B] font-semibold">PyPI</span>,{' '}
             <br className="hidden sm:block" />
             earn <span className="text-[#FFD43B] font-semibold">Venom coins</span> — buy cool stuff! 
             <span className="inline-block ml-1">🐍</span>
