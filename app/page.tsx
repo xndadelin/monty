@@ -24,7 +24,8 @@ export default function Monty() {
                      [text-shadow:0_2px_4px_rgba(0,0,0,0.2)]
                      hover:bg-gradient-to-br hover:from-[#5BA3F5] hover:to-[#4A90E2] hover:border-[#FFD43B] 
                      hover:shadow-[0_8px_35px_rgba(74,144,226,0.6),0_0_20px_rgba(255,212,59,0.3)] hover:-translate-y-[3px] hover:scale-105
-                     active:-translate-y-[1px] active:scale-[1.02]"
+                     active:-translate-y-[1px] active:scale-[1.02]
+                     max-sm:top-4 max-sm:right-4 max-sm:px-4 max-sm:py-2 max-sm:text-sm max-sm:border-2"
           style={{ fontFamily: "'Fredoka One', cursive" }}
         >
           FAQ
@@ -34,11 +35,11 @@ export default function Monty() {
           <div className="absolute top-0 left-0 right-0 bottom-0 bg-[radial-gradient(circle_at_80%_50%,rgba(74,144,226,0.1)_0%,transparent_50%)]" />
         </div>
 
-        <div className="relative text-center">
-          <div className="absolute -top-20 -left-24 text-[120px] opacity-15 pointer-events-none -rotate-[15deg]">
+        <div className="relative text-center px-4">
+          <div className="absolute -top-20 -left-24 text-[120px] opacity-15 pointer-events-none -rotate-[15deg] max-sm:text-[60px] max-sm:-top-10 max-sm:-left-12">
             🐍
           </div>
-          <div className="absolute -bottom-20 -right-24 text-[120px] opacity-15 pointer-events-none rotate-[15deg]">
+          <div className="absolute -bottom-20 -right-24 text-[120px] opacity-15 pointer-events-none rotate-[15deg] max-sm:text-[60px] max-sm:-bottom-10 max-sm:-right-12">
             🐍
           </div>
 
@@ -59,31 +60,41 @@ export default function Monty() {
             </h1>
           </div>
 
-          <form onSubmit={handleSubmit} className="mt-20 flex flex-row items-center justify-center gap-0">
+          <p className="mt-8 text-white text-center max-w-[580px] mx-auto px-6 text-lg sm:text-xl md:text-2xl font-['Inter',sans-serif] leading-relaxed font-light">
+            Code <span className="text-[#FFD43B] font-semibold">Python libraries</span>, publish to <span className="text-[#FFD43B] font-semibold">PyPI</span>,
+            <br className="hidden sm:block" />
+            earn <span className="text-[#FFD43B] font-semibold">Venom coins</span> — buy cool stuff! 
+            <span className="inline-block ml-1">🐍</span>
+          </p>
+
+          <form onSubmit={handleSubmit} className="mt-12 sm:mt-16 flex flex-col sm:flex-row items-center justify-center gap-0 px-4">
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="RSVP! Enter your email..."
-              className="w-[350px] max-w-[60vw] px-5 py-[10px] text-base
+              className="w-full sm:w-[350px] max-w-[90vw] sm:max-w-[60vw] px-5 py-[10px] text-base
                          bg-white/10 backdrop-blur-[10px]
-                         border-[3px] border-[rgba(255,212,59,0.5)] border-r-0 rounded-l-[15px]
+                         border-[3px] border-[rgba(255,212,59,0.5)] sm:border-r-0 rounded-t-[15px] sm:rounded-t-none sm:rounded-l-[15px]
                          text-white placeholder:text-white/60 placeholder:font-bold
                          font-['Courier_New',monospace]
                          outline-none transition-all duration-300
-                         focus:bg-white/15 focus:border-[#FFD43B] focus:shadow-[0_0_30px_rgba(255,212,59,0.4)]"
+                         focus:bg-white/15 focus:border-[#FFD43B] focus:shadow-[0_0_30px_rgba(255,212,59,0.4)]
+                         text-sm sm:text-base"
               required
             />
             <button
               type="submit"
-              className="px-7 py-[10px] text-base font-bold
-                         bg-[#FFD43B] border-[3px] border-[#FFD43B] border-l-0 rounded-r-[15px]
+              className="w-full sm:w-auto px-7 py-[10px] text-base font-bold
+                         bg-[#FFD43B] border-[3px] border-[#FFD43B] sm:border-l-0 
+                         rounded-b-[15px] sm:rounded-b-[0px] sm:rounded-tr-[15px] sm:rounded-br-[15px]
                          text-[#1e3a5f] cursor-pointer
                          font-['Courier_New',monospace]
                          transition-all duration-300
                          shadow-[0_5px_20px_rgba(0,0,0,0.3)]
                          hover:bg-[#ffd000] hover:border-[#ffd000] hover:shadow-[0_5px_30px_rgba(255,212,59,0.6)]
-                         active:scale-[0.98]"
+                         active:scale-[0.98]
+                         text-sm sm:text-base"
             >
               Submit
             </button>
