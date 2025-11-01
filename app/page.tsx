@@ -36,10 +36,10 @@ export default function Monty() {
         </div>
 
         <div className="relative text-center px-4">
-          <div className="absolute -top-20 -left-24 text-[120px] opacity-15 pointer-events-none -rotate-[15deg] max-sm:text-[60px] max-sm:-top-10 max-sm:-left-12">
+          <div className="absolute -top-20 -left-24 text-[120px] opacity-15 pointer-events-none -rotate-[15deg] max-sm:text-[80px] max-sm:opacity-20 max-sm:-top-8 max-sm:-left-6">
             🐍
           </div>
-          <div className="absolute -bottom-20 -right-24 text-[120px] opacity-15 pointer-events-none rotate-[15deg] max-sm:text-[60px] max-sm:-bottom-10 max-sm:-right-12">
+          <div className="absolute -bottom-20 -right-24 text-[120px] opacity-15 pointer-events-none rotate-[15deg] max-sm:text-[80px] max-sm:opacity-20 max-sm:-bottom-8 max-sm:-right-6">
             🐍
           </div>
 
@@ -67,7 +67,7 @@ export default function Monty() {
             <span className="inline-block ml-1">🐍</span>
           </p>
 
-          <form onSubmit={handleSubmit} className="mt-12 sm:mt-16 flex flex-col sm:flex-row items-center justify-center gap-0 px-4">
+          <form onSubmit={handleSubmit} className="mt-12 sm:mt-16 flex flex-col sm:flex-row items-center justify-center gap-0 px-4 relative z-10">
             <input
               type="email"
               value={email}
