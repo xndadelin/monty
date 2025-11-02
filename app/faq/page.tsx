@@ -23,7 +23,7 @@ const faqData: FAQItem[] = [
   },
   {
     question: "What is PyPI?",
-    answer: "PyPI, or the Python Package Index, is the official repository for Python packages. It's where developers can publish and share their Python libraries/modules."
+    answer: "PyPI, or the Python Package Index, is the official repository for Python packages. It's where developers can publish and share their Python libraries."
   },
   {
     question: "What are venom coins?",
