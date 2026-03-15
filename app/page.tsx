@@ -4,6 +4,44 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+const faqData: FAQItem[] = [
+  {
+    question: "What is Monty?",
+    answer:
+      "Monty is a YSWS Hack Club program based on Python libraries. You code open-source Python libraries, publish them to PyPI, get venom coins, and use them in the shop for cool loot.",
+  },
+  {
+    question: "What are venom coins?",
+    answer:
+      "Venom coins are a virtual currency used in Monty. You earn them by publishing Python libraries, and spend them in our shop!",
+  },
+  {
+    question: "How many coins do I earn per hour?",
+    answer:
+      "You earn 1 Venom Coin for every hour of work you put into your libraries.",
+  },
+  {
+    question: "Is AI allowed?",
+    answer:
+      "Yes, standard AI tools (like Copilot or ChatGPT) are allowed for assistance, but fully autonomous coding agents are strictly prohibited. You must be the one actively writing and understanding the code!",
+  },
+  {
+    question: "Who can join Monty?",
+    answer:
+      "Any Hack Clubber interested in Python programming, no matter their skill level, background, or location. We welcome beginners and experienced developers alike!",
+  },
+  {
+    question: "I do not know Python. Can I join?",
+    answer:
+      "Of course! Monty is designed to be inclusive. We encourage beginners to join and learn along the way.",
+  },
+];
+
 const row1Loot = [
   {
     name: "Logic Analyzer",
@@ -78,6 +116,14 @@ const row2Loot = [
     cost: "~6 hours",
     img: "https://cdn1.epicgames.com/offer/crab/EGS_Satisfactory_CoffeeStainStudios_S2_1200x1600-8a389a525cee6928c427b4a99563e282",
   },
+];
+
+const stickyColors = [
+  "bg-[#ffde59]",
+  "bg-[#00f0ff]",
+  "bg-[#ff90e8]",
+  "bg-[#58ff21]",
+  "bg-[#fff]",
 ];
 
 export default function Monty() {
@@ -233,7 +279,7 @@ export default function Monty() {
         </section>
       </main>
 
-      <section className="w-full mt-32 relative flex flex-col items-center z-10 p-0 m-0">
+      <section className="w-full relative flex flex-col items-center z-10 p-0 m-0">
         <div className="bg-[#fff] border-4 border-black px-8 py-6 text-center transform -rotate-2 shadow-[8px_8px_0_#000] max-w-4xl w-[90%] relative z-30 mb-8 mt-10">
           <div className="tape"></div>
           <h2 className="text-[#ff003c] text-5xl sm:text-6xl font-black comic-title">
@@ -320,6 +366,50 @@ export default function Monty() {
           </div>
         </div>
       </section>
+
+      <main className="w-full max-w-7xl mx-auto px-4 sm:px-6 relative z-10 flex flex-col items-center">
+        <section className="w-full mt-32 pt-20 border-t-8 border-black border-dashed relative flex flex-col items-center mb-10">
+          <div className="absolute -top-10 bg-[#000] px-8 py-3 rotate-2 border-4 border-[#00f0ff] shadow-[8px_8px_0_#ff90e8]">
+            <h2 className="text-[#00f0ff] text-5xl sm:text-7xl tracking-widest">
+              THE INFO BOARD
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full mt-10 items-start">
+            {faqData.map((item, index) => {
+              const bg = stickyColors[index % stickyColors.length];
+              const rots = [
+                "rotate-1",
+                "-rotate-2",
+                "rotate-3",
+                "-rotate-1",
+                "rotate-2",
+              ];
+              const rot = rots[index % rots.length];
+              return (
+                <div key={index} className={`sticky-note ${bg} ${rot} w-full`}>
+                  <div className="pin"></div>
+                  <h3 className="text-3xl uppercase leading-tight mb-3 border-b-4 border-black/20 pb-2 text-black">
+                    {item.question}
+                  </h3>
+                  <p className="text-xl font-body font-bold leading-relaxed whitespace-pre-wrap text-black/80">
+                    {item.answer}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="flex justify-center mt-16 w-full">
+            <Link
+              href="/faq"
+              className="inline-button bg-[#00f0ff] border-4 border-black text-2xl px-8 py-4 text-3xl font-black shadow-[6px_6px_0_#000] hover:shadow-[2px_2px_0_#000] hover:translate-x-1 hover:translate-y-1 transition-all uppercase -rotate-1"
+            >
+              READ THE FULL FAQ
+            </Link>
+          </div>
+        </section>
+      </main>
     </div>
   );
 }
