@@ -32,7 +32,7 @@
   }
 
   .comic-button:hover {
-    transform: translate(-2px, -2px) rotate(0deg) !important;
+    transform: translate(-2px, -2px) rotate(-2deg) !important;
     box-shadow: 7px 7px 0px #000;
   }
 
@@ -77,3 +77,20 @@
 
 }
 
+
+@keyframes slide-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes slide-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+.animate-slide-left {
+  animation: slide-left 40s linear infinite;
+  display: flex;
+}
+.animate-slide-right {
+  animation: slide-right 40s linear infinite;
+  display: flex;
+}
