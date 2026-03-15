@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 
+export const metadata: Metadata = {
+  title: "Monty",
+  description: "Monty - YSWS for python libraries!"
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
