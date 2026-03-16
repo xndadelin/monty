@@ -179,7 +179,7 @@ export default function Monty() {
                   <span className="inline-block bg-[#58ff21] text-black border-2 border-black rounded-full w-8 h-8 text-center leading-7 font-black mx-1 shadow-[2px_2px_0_#000] -rotate-6 relative -top-1">
                     V
                   </span>
-                  . That's the entire gig. You ship code, we ship loot!
+                   {" "}to get stuff! That's the entire gig. You ship code, we ship loot!
                 </p>
               </div>
 
