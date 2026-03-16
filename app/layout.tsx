@@ -4,7 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Monty",
-  description: "Monty - YSWS for python libraries!"
+  description: "Monty - YSWS for python packages, tools and games!"
 }
 
 export default function RootLayout({

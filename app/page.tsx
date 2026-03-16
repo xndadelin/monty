@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -10,6 +9,21 @@ interface FAQItem {
 }
 
 const faqData: FAQItem[] = [
+  {
+    question: "What is Monty?",
+    answer:
+      "Monty is a YSWS Hack Club program based on Python packages. You code open-source Python projects, publish them to PyPI, get venom coins, and use them in the shop for cool loot.",
+  },
+  {
+    question: "What are venom coins?",
+    answer:
+      "Venom coins are a virtual currency used in Monty. You earn them by publishing Python packages, and spend them in our shop!",
+  },
+  {
+    question: "How many coins do I earn per hour?",
+    answer:
+      "You earn 1 Venom Coin for every hour of work you put into your projects.",
+  },
   {
     question: "What is Monty?",
     answer:
@@ -180,7 +194,7 @@ export default function Monty() {
                   What exactly is this?
                 </h3>
                 <p className="font-body text-left text-2xl font-bold mt-4 leading-relaxed tracking-wide">
-                  Code open source Python libraries, publish them to PyPI, and
+                  Code open source Python packages, tools, or games, publish them to PyPI, and
                   earn Venom Coins{" "}
                   <span className="inline-block bg-[#58ff21] text-black border-2 border-black rounded-full w-8 h-8 text-center leading-7 font-black mx-1 shadow-[2px_2px_0_#000] -rotate-6 relative -top-1">
                     V
@@ -198,9 +212,9 @@ export default function Monty() {
                     <div className="text-5xl font-black bg-white rounded-full w-14 h-14 flex items-center justify-center border-4 border-black shadow-[2px_2px_0_#000] absolute -top-4 -left-4">
                       1
                     </div>
-                    <h3 className="text-4xl mt-2 ml-4">Code Sick Libraries</h3>
+                    <h3 className="text-4xl mt-2 ml-4">Code Sick Packages</h3>
                     <p className="font-body text-2xl font-bold mt-2 leading-tight ml-4">
-                      Write awesome open-source Python libraries that the world
+                      Write awesome open-source Python projects, scripts, or tools that the world
                       can use.{" "}
                     </p>
                   </div>

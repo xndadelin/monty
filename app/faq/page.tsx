@@ -10,7 +10,7 @@ interface FAQItem {
 const faqData: FAQItem[] = [
   {
     question: "What is Monty?",
-    answer: "Monty is a YSWS Hack Club program based on Python libraries. You code open-source Python libraries, publish them to PyPI, get venom coins, and use them in the shop for cool loot."
+    answer: "Monty is a YSWS Hack Club program based on Python packages. You code open-source Python projects, publish them to PyPI, get venom coins, and use them in the shop for cool loot."
   },
   {
     question: "Who can join Monty?",
@@ -22,15 +22,15 @@ const faqData: FAQItem[] = [
   },
   {
     question: "What is PyPI?",
-    answer: "PyPI (Python Package Index) is the official repository for Python packages. It's where developers publish their modules."
+    answer: "PyPI (Python Package Index) is the official repository for Python packages. It's where developers publish their modules and tools."
   },
   {
     question: "What are venom coins?",
-    answer: "Venom coins are a virtual currency used in Monty. You earn them by publishing Python libraries, and spend them in our shop!"
+    answer: "Venom coins are a virtual currency used in Monty. You earn them by publishing Python packages, and spend them in our shop!"
   },
   {
     question: 'How many coins do I earn per hour?',
-    answer: 'You earn 1 Venom Coin for every hour of work you put into your libraries.'
+    answer: 'You earn 1 Venom Coin for every hour of work you put into your projects.'
   },
   {
     question: 'Is AI allowed?',
@@ -46,7 +46,7 @@ const faqData: FAQItem[] = [
   },
   {
     question: "How are hours tracked and verified?",
-    answer: "We use Hackatime (https://hackatime.hackclub.com) to automatically track your coding hours! However, we also review your GitHub commits, PRs, and the general scope of your library when you submit it. Make sure you are pushing code regularly so we can see your progress!"
+    answer: "We use Hackatime (https://hackatime.hackclub.com) to automatically track your coding hours! However, we also review your GitHub commits, PRs, and the general scope of your project when you submit it. Make sure you are pushing code regularly so we can see your progress!"
   },
   {
     question: "Can I work on a team?",

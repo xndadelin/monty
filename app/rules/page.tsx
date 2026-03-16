@@ -10,7 +10,7 @@ interface RuleItem {
 const rulesData: RuleItem[] = [
   {
     title: "No BS Submissions",
-    description: "Your library has to be a real, functioning project. No \"Hello World\" scripts just to farm coins. We review every single submission before handing out venom!"
+    description: "Your project has to be a real, functioning project. No \"Hello World\" scripts just to farm coins. We review every single submission before handing out venom!"
   },
   {
     title: "18 And Under Only",
@@ -18,7 +18,7 @@ const rulesData: RuleItem[] = [
   },
   {
     title: "Open Source Only",
-    description: "Your code must be publicly available on GitHub and the library must be officially published on PyPI. It needs an open-source license so anyone can use it."
+    description: "Your code must be publicly available on GitHub and the package must be officially published on PyPI. It needs an open-source license so anyone can use it."
   },
   {
     title: "Original Work",
@@ -26,11 +26,11 @@ const rulesData: RuleItem[] = [
   },
   {
     title: "Installable via pip",
-    description: "The main goal is that anyone in the world should be able to run `pip install your-library` and have it work seamlessly on their machine. Documentation and a good README are highly encouraged!"
+    description: "The main goal is that anyone in the world should be able to run `pip install your-package` and have it work seamlessly on their machine. Documentation and a good README are highly encouraged!"
   },
   {
     title: "Real Utility",
-    description: "Libraries should solve a real problem or provide some fun/useful functionality. Whether it's a wrapper for a cool API, a math tool, or a terminal visualizer, make it something you'd actually want to use."
+    description: "Projects should solve a real problem or provide some fun/useful functionality. Whether it's a wrapper for a cool API, a math tool, a game, or a terminal visualizer, make it something you'd actually want to use."
   }
 ];
 
