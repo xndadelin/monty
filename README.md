@@ -4,6 +4,7 @@
 
 
 This project is written with Typescript/TailwindCSS for styling, with the help of the NextJS framework :). The styling is inspired by cartoony designs :).
+Also there is the Vercel Analytics plugin to see how the users interact with the page.
 It only has the main page ('/') and FAQ ('/faq').
 
 To run this app, git clone, install libraries and npm run it!
